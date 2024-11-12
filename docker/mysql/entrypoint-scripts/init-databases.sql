@@ -1,0 +1,6 @@
+CREATE DATABASE IF NOT EXISTS testapp;
+CREATE DATABASE IF NOT EXISTS testapp_test;
+
+GRANT ALL PRIVILEGES ON testapp.* TO 'app_user'@'%';
+GRANT ALL PRIVILEGES ON testapp_test.* TO 'app_user'@'%';
+FLUSH PRIVILEGES;
