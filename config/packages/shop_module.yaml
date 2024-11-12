@@ -1,0 +1,16 @@
+doctrine:
+  orm:
+    mappings:
+      Shop:
+        type: xml
+        is_bundle: false
+        dir: '%kernel.project_dir%/src/Shop/Infrastructure/Mapping'
+        prefix: 'App\Shop\Domain\Entity'
+        alias: Shop
+
+services:
+  App\Shop\:
+    resource: '%kernel.project_dir%/src/Shop'
+    exclude:
+      - '%kernel.project_dir%/src/Shop/Domain/Entity'
+      - '%kernel.project_dir%/src/Shop/Domain/View'
